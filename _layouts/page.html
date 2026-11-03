@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<header class="page-header">
+  <div class="container">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    {%- endif %}
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {%- if page.intro %}
+    <p class="lead">{{ page.intro }}</p>
+    {%- endif %}
+  </div>
+</header>
+
+{%- if page.banner %}
+<div class="container page-banner">
+  {% include image.html img=page.banner max=1600 loading="eager" sizes="(min-width: 1120px) 1072px, 100vw" %}
+</div>
+{%- endif %}
+
+<div class="container page-content">
+  {{ content }}
+</div>

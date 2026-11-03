@@ -15,15 +15,28 @@ GitHub construit le site automatiquement avec Jekyll à chaque modification de `
 
 ## Structure
 
-| Fichier / dossier | Rôle |
+| Page | Fichier |
 |---|---|
-| `_config.yml` | Nom, description, URL du site, liens vers les CV |
-| `index.html` | Page d'accueil (présentation, grille des projets, CV) |
-| `_projects/*.md` | **Un fichier par projet** (texte + infos + images) |
-| `_layouts/` | Gabarits des pages (`default.html`, `project.html`) |
-| `_includes/image.html` | Génère les images responsives |
+| Home (accueil, à propos, CV, mentors) | `index.html` |
+| Projects | `projects.html` + `_projects/*.md` (un fichier par projet) |
+| Engagement | `engagement.md` |
+| FutursProches | `futursproches.md` |
+| Mobility | `mobility.md` |
+| Sports | `sports.md` |
+| Contact | `contact.html` |
+
+| Autres fichiers | Rôle |
+|---|---|
+| `_config.yml` | Nom du site, **menu**, **coordonnées**, **liens vers les CV** |
+| `_layouts/` | Gabarits (`default.html` = en-tête/pied de page, `page.html`, `project.html`) |
+| `_includes/` | Blocs réutilisables (images, galeries, cartes projet) |
 | `assets/css/style.css` | Le style (couleurs, mode sombre automatique) |
-| `assets/js/main.js` | Visionneuse d'images (lightbox) |
+| `assets/js/main.js` | Menu mobile, formulaire de contact, visionneuse d'images |
+
+Les textes des pages `.md` s'écrivent en Markdown : modifiez-les directement sur GitHub (bouton ✏️).
+
+Le formulaire de contact ouvre la messagerie du visiteur avec le message pré-rempli
+(GitHub Pages ne peut pas envoyer d'e-mails lui-même).
 
 ## Ajouter ou modifier un projet
 

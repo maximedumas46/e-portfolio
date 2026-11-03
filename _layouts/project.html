@@ -13,7 +13,7 @@ layout: default
 <article class="project">
   <header class="project-header">
     <div class="container">
-      <a class="back-link" href="{{ '/#projects' | relative_url }}">← All projects</a>
+      <a class="back-link" href="{{ '/projects/' | relative_url }}">← All projects</a>
       <p class="eyebrow">Project {{ idx | plus: 1 }} / {{ projects.size }}</p>
       <h1>{{ page.title }}</h1>
       <dl class="details">
@@ -80,13 +80,3 @@ layout: default
     {%- endif %}
   </nav>
 </article>
-
-<dialog class="lightbox" aria-label="Image viewer">
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
-  <button class="lightbox-prev" type="button" aria-label="Previous image">‹</button>
-  <figure>
-    <img alt="">
-    <figcaption></figcaption>
-  </figure>
-  <button class="lightbox-next" type="button" aria-label="Next image">›</button>
-</dialog>

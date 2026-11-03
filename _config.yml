@@ -1,7 +1,7 @@
 # Site settings
 title: Maxime DUMAS
 tagline: Portfolio — FISA 3EA
-description: Portfolio of academic and professional projects — FISA 3EA.
+description: Portfolio of Maxime Dumas, engineering student specializing in electronics, electrical energy, and embedded systems.
 lang: en
 author: Maxime DUMAS
 
@@ -9,12 +9,50 @@ author: Maxime DUMAS
 url: https://maximedumas46.github.io
 baseurl: /e-portfolio
 
-# CV files (PDF). Replace with local files (e.g. /assets/cv/CV_EN.pdf) if you add them to the repo.
+# Main menu
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Engagement
+    url: /engagement/
+  - title: FutursProches
+    url: /futursproches/
+  - title: Mobility
+    url: /mobility/
+  - title: Sports
+    url: /sports/
+  - title: Contact
+    url: /contact/
+
+# Contact details (Contact page + footer)
+contact:
+  address:
+    - 58 Boulevard d'Arcole
+    - 31000, Toulouse
+  email: maximedumas46@live.fr
+  phone: 06.28.18.14.95
+  phone_link: "+33628181495"
+
+# CV files (PDF) and their preview images
 cv:
-  - label: CV (English)
-    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.usrfiles.com/ugd/3d2323_903445f7b5f240baa4f0a963364af003.pdf
-  - label: CV (Français)
-    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.usrfiles.com/ugd/3d2323_94f8e5c50723429d91e441ef8826c397.pdf
+  - label: CV_ENGLISH
+    lang: English
+    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.filesusr.com/ugd/3d2323_903445f7b5f240baa4f0a963364af003.pdf
+    preview:
+      id: "3d2323_6ad9710460a548d5b60cd45a441441e6~mv2.png"
+      width: 927
+      height: 1312
+      alt: "Preview of the English CV"
+  - label: CV_FRANCAIS
+    lang: Français
+    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.filesusr.com/ugd/3d2323_94f8e5c50723429d91e441ef8826c397.pdf
+    preview:
+      id: "3d2323_24cffc80cc0341539d6aab375f98693b~mv2.png"
+      width: 945
+      height: 1330
+      alt: "Aperçu du CV en français"
 
 # Projects: one Markdown file per project in _projects/
 collections:

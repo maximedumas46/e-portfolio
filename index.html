@@ -1,74 +1,142 @@
 ---
 layout: default
+# Photos of electronics / electrical work shown on the home page
+hero_photos:
+  - id: "3d2323_d28b1a78f8bd40f481d28223c8787aac~mv2.jpg"
+    width: 3472
+    height: 4624
+    alt: "Electronics work bench"
+  - id: "3d2323_a94c57fb3d9b4ea3b465e7efa94f4597~mv2.jpg"
+    width: 4624
+    height: 3472
+    alt: "Oscilloscope and circuit"
+  - id: "3d2323_c2322486b52e46188205c05e777afa32~mv2.jpg"
+    width: 1600
+    height: 1204
+    alt: "Oscilloscope measurement"
+lab_photos:
+  - id: "3d2323_bc0f34e71c4a49c1bc21be8069b818d7~mv2.jpg"
+    width: 3472
+    height: 4624
+    alt: "Embedded electronics prototype"
+  - id: "3d2323_432f1997ef97420e85678cd2cb4c8225~mv2.jpg"
+    width: 3472
+    height: 4624
+    alt: "Electrical circuit"
+  - id: "3d2323_fe162455cf984fe2bb7052f121c089b4~mv2.jpg"
+    width: 3472
+    height: 4624
+    alt: "Measurements with an oscilloscope"
+  - id: "3d2323_8c801681d4344c08a50c5b786025b0c3~mv2.jpg"
+    width: 3472
+    height: 4624
+    alt: "Electronic circuit board"
+  - id: "3d2323_00819dd9883f404294338eeedb07c033~mv2.jpg"
+    width: 1152
+    height: 1807
+    alt: "Electrical panel and multimeter"
+  - id: "3d2323_ad9302179c4149f485df48d085003f28~mv2.jpg"
+    width: 1152
+    height: 2048
+    alt: "Electrical panel"
 ---
 {%- assign projects = site.projects | sort: "order" -%}
-{%- assign locations = projects | map: "location" | uniq -%}
 
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-text">
-      <p class="eyebrow">{{ site.tagline }}</p>
-      <h1>{{ site.title }}</h1>
-      <p class="lead">Welcome to my portfolio. Here you will find a selection of my work. Explore my projects to learn more.</p>
+      <p class="eyebrow">Portfolio of Maxime Dumas</p>
+      <h1>Welcome to my portfolio!</h1>
+      <p class="lead">My name is Maxime Dumas, and I am currently an engineering student specializing in electronics, electrical energy, and embedded systems.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#projects">View projects</a>
-        {%- if site.cv and site.cv.size > 0 %}
-        <a class="btn" href="{{ site.cv[0].url }}" target="_blank" rel="noopener">Download CV</a>
-        {%- endif %}
+        <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View projects</a>
+        <a class="btn" href="#resume">My resume</a>
       </div>
       <dl class="facts">
-        <div><dt>Projects</dt><dd>{{ projects.size }}</dd></div>
-        <div><dt>Places</dt><dd>{{ locations | join: " · " }}</dd></div>
+        <div><dt>Engineering school</dt><dd>ENSEEIHT</dd></div>
+        <div><dt>Previously</dt><dd>BUT GEII · IUT Paul Sabatier</dd></div>
+        <div><dt>Company</dt><dd>Axians</dd></div>
       </dl>
     </div>
     <div class="hero-mosaic" aria-hidden="true">
-      {%- for p in projects limit: 3 %}
+      {%- for ph in page.hero_photos %}
       <div class="mosaic-tile tile-{{ forloop.index }}">
-        {% include image.html img=p.cover alt="" max=640 sizes="(min-width: 960px) 20vw, 40vw" loading="eager" %}
+        {% include image.html img=ph alt="" max=800 sizes="(min-width: 960px) 25vw, 50vw" loading="eager" %}
       </div>
       {%- endfor %}
     </div>
   </div>
 </section>
 
-<section id="projects" class="section">
+<section class="section" id="about">
+  <div class="container about">
+    <div class="prose">
+      <h2>About me</h2>
+      <p>I first discovered the diversity and possibilities of the electrical and electronic world during my BUT GEII, where I explored areas ranging from electronics and automation to embedded systems and digital signal processing. These experiences showed me how rich and varied this field is, and they sparked a strong interest in understanding and designing complex electrical systems.</p>
+      <p>Today, at ENSEEIHT, my goal is to continue developing my technical skills, broaden my knowledge, and progressively identify the sector that inspires me the most within the wide field of electrical and electronic engineering. I see these three years as an opportunity to grow, explore new domains, and strengthen both my technical and teamwork abilities.</p>
+      <p>This portfolio reflects my background, my evolution, and the direction I aim to take as I continue shaping my future as an engineer.</p>
+    </div>
+    {% include gallery.html images=page.lab_photos class="cols-3 square" group="lab" sizes="(min-width: 960px) 180px, 33vw" %}
+  </div>
+</section>
+
+<section class="section section-alt" id="resume">
   <div class="container">
     <div class="section-head">
-      <h2>My Projects</h2>
-      <p class="muted">Academic projects (SAE) from BUT GEII and apprenticeship work.</p>
+      <h2>My Resume</h2>
+      <p class="muted">You can find my resumes below, in French and in English!</p>
+    </div>
+    <div class="cv-grid">
+      {%- for c in site.cv %}
+      <a class="cv-card" href="{{ c.url }}" target="_blank" rel="noopener">
+        <div class="cv-preview">
+          {% include image.html img=c.preview max=640 sizes="(min-width: 800px) 260px, 45vw" %}
+        </div>
+        <div class="cv-info">
+          <span class="cv-label">{{ c.label }}</span>
+          <span class="muted">{{ c.lang }} · PDF</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mentors">
+  <div class="container">
+    <div class="section-head">
+      <h2>Mentors</h2>
+    </div>
+    <article class="mentor">
+      <div class="mentor-head">
+        <span class="mentor-avatar" aria-hidden="true">SS</span>
+        <div>
+          <h3>Sébastien SALAS</h3>
+          <p class="muted">Director of Training at CAP’TRONIC</p>
+        </div>
+      </div>
+      <div class="prose">
+        <p>I had the opportunity to conduct an interview with Sébastien Salas, the Director of Training at CAP’TRONIC, an organization that supports companies in developing innovative electronic and embedded solutions. Although he is not an engineer himself, his long career in the field and his position gave him a broad, transversal understanding of the many professions linked to electronics, embedded systems, IoT, industrialisation and digital transformation.</p>
+        <p>This multidimensional perspective was extremely valuable for me. He explained the wide variety of roles that exist in the electronic and embedded sectors, from engineering to project supervision, cyber-security, industrialization and technical consulting. His experience allowed him to give me objective and insightful guidance regarding training paths, the differences between working in SMEs and large companies, and the importance of continuing to learn throughout an engineering career.</p>
+        <p>This discussion helped me better understand the diversity of possible directions within my field and encouraged me to keep my options open as I progress through my engineering studies. It reassured me in my choice to join an engineering school and confirmed that exploring different domains over the next three years will be essential to identify the sector that suits me best.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-head section-head-row">
+      <div>
+        <h2>My Projects</h2>
+        <p class="muted">A selection of my most recent work.</p>
+      </div>
+      <a class="btn" href="{{ '/projects/' | relative_url }}">See all {{ projects.size }} projects →</a>
     </div>
     <ul class="project-grid">
-      {%- for p in projects %}
-      <li>
-        <a class="card" href="{{ p.url | relative_url }}">
-          <div class="card-media">
-            {% include image.html img=p.cover alt=p.title max=960 sizes="(min-width: 1100px) 340px, (min-width: 640px) 45vw, 100vw" %}
-          </div>
-          <div class="card-body">
-            <p class="card-meta">{{ p.year }}<span aria-hidden="true"> · </span>{{ p.type }}</p>
-            <h3>{{ p.title }}</h3>
-            <p class="card-summary">{{ p.summary }}</p>
-            <p class="card-location">{{ p.location }}</p>
-          </div>
-        </a>
-      </li>
+      {%- for p in projects limit: 3 %}
+      <li>{% include project-card.html project=p %}</li>
       {%- endfor %}
     </ul>
   </div>
 </section>
-
-{%- if site.cv and site.cv.size > 0 %}
-<section id="cv" class="section section-alt">
-  <div class="container cv-block">
-    <div>
-      <h2>Curriculum Vitae</h2>
-      <p class="muted">Available in English and French (PDF).</p>
-    </div>
-    <div class="actions">
-      {%- for c in site.cv %}
-      <a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.label }}</a>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-{%- endif %}

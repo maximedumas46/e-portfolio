@@ -1,0 +1,17 @@
+{%- comment -%}
+  Photo grid with lightbox.
+  Params: images (list), class (extra CSS class, e.g. "cols-2", "cols-3", "fit"), group (lightbox group name)
+{%- endcomment -%}
+{%- assign g_sizes = include.sizes | default: "(min-width: 960px) 33vw, (min-width: 600px) 50vw, 100vw" -%}
+<div class="photo-grid {{ include.class }}">
+{%- for g in include.images %}
+<figure class="photo">
+<a href="{% include image-url.html img=g %}" data-lightbox="{{ include.group | default: 'page' }}" data-caption="{{ g.title | default: g.alt | escape }}">
+{% include image.html img=g max=1280 sizes=g_sizes %}
+</a>
+{%- if g.title %}
+<figcaption>{{ g.title }}</figcaption>
+{%- endif %}
+</figure>
+{%- endfor %}
+</div>
