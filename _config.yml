@@ -40,7 +40,7 @@ contact:
 cv:
   - label: CV_ENGLISH
     lang: English
-    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.filesusr.com/ugd/3d2323_903445f7b5f240baa4f0a963364af003.pdf
+    url: /assets/cv/CV_DUMAS_MAXIME_ENGLISH.pdf
     preview:
       id: "3d2323_6ad9710460a548d5b60cd45a441441e6~mv2.png"
       width: 927
@@ -48,7 +48,7 @@ cv:
       alt: "Preview of the English CV"
   - label: CV_FRANCAIS
     lang: Français
-    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.filesusr.com/ugd/3d2323_94f8e5c50723429d91e441ef8826c397.pdf
+    url: /assets/cv/CV_DUMAS_MAXIME_FRANCAIS.pdf
     preview:
       id: "3d2323_24cffc80cc0341539d6aab375f98693b~mv2.png"
       width: 945
@@ -57,8 +57,7 @@ cv:
 
 # false = photos are loaded from Wix; true = local copies in assets/media/
 # (set automatically by the "Import Wix media" workflow)
-media_local: false
-
+media_local: true
 # Projects: one Markdown file per project in _projects/
 collections:
   projects:
