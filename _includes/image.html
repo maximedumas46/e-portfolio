@@ -1,0 +1,33 @@
+{%- comment -%}
+  Responsive <img>.
+  Params:
+    img     : object with either `src` (local file, e.g. /assets/img/photo.jpg)
+              or `id` (Wix Media file id), plus width, height, alt, fx, fy (focal point 0..1)
+    max     : largest width to serve (default 1600)
+    sizes   : <img sizes> attribute
+    loading : lazy (default) | eager
+    class   : CSS class
+{%- endcomment -%}
+{%- assign im = include.img -%}
+{%- assign max = include.max | default: 1600 -%}
+{%- assign fx = im.fx | default: 0.5 | times: 100 -%}
+{%- assign fy = im.fy | default: 0.5 | times: 100 -%}
+{%- assign alt = im.alt | default: include.alt | default: "" -%}
+{%- if im.src -%}
+<img src="{{ im.src | relative_url }}" alt="{{ alt | escape }}"{% if im.width %} width="{{ im.width }}" height="{{ im.height }}"{% endif %}{% if include.class %} class="{{ include.class }}"{% endif %} style="object-position: {{ fx }}% {{ fy }}%" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
+{%- else -%}
+{%- assign base = "https://static.wixstatic.com/media/" | append: im.id | append: "/v1/fit/" -%}
+{%- if im.width > max -%}{%- assign fw = max -%}{%- else -%}{%- assign fw = im.width -%}{%- endif -%}
+{%- assign fh = im.height | times: fw | divided_by: im.width -%}
+{%- capture full -%}{{ base }}w_{{ fw }},h_{{ fh }},q_85,enc_auto/{{ im.id }}{%- endcapture -%}
+{%- assign widths = "400,640,960,1280" | split: "," -%}
+{%- capture srcset -%}
+{%- for s in widths -%}
+{%- assign cw = s | plus: 0 -%}
+{%- if cw >= fw -%}{%- break -%}{%- endif -%}
+{%- assign ch = im.height | times: cw | divided_by: im.width -%}
+{{ base }}w_{{ cw }},h_{{ ch }},q_85,enc_auto/{{ im.id }} {{ cw }}w, {% endfor -%}
+{{ full }} {{ fw }}w
+{%- endcapture -%}
+<img src="{{ full }}" srcset="{{ srcset | strip }}" sizes="{{ include.sizes | default: '100vw' }}" alt="{{ alt | escape }}" width="{{ fw }}" height="{{ fh }}"{% if include.class %} class="{{ include.class }}"{% endif %} style="object-position: {{ fx }}% {{ fy }}%" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
+{%- endif -%}

@@ -1,0 +1,40 @@
+# Site settings
+title: Maxime DUMAS
+tagline: Portfolio — FISA 3EA
+description: Portfolio of academic and professional projects — FISA 3EA.
+lang: en
+author: Maxime DUMAS
+
+# GitHub Pages URL: https://maximedumas46.github.io/e-portfolio/
+url: https://maximedumas46.github.io
+baseurl: /e-portfolio
+
+# CV files (PDF). Replace with local files (e.g. /assets/cv/CV_EN.pdf) if you add them to the repo.
+cv:
+  - label: CV (English)
+    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.usrfiles.com/ugd/3d2323_903445f7b5f240baa4f0a963364af003.pdf
+  - label: CV (Français)
+    url: https://2955ad6c-541f-4ad0-80f1-370c22979e08.usrfiles.com/ugd/3d2323_94f8e5c50723429d91e441ef8826c397.pdf
+
+# Projects: one Markdown file per project in _projects/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

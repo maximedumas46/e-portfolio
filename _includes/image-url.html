@@ -1,0 +1,8 @@
+{%- comment -%}Full-size URL of an image (for links / lightbox). Params: img, max (default 1800){%- endcomment -%}
+{%- assign im = include.img -%}
+{%- assign max = include.max | default: 1800 -%}
+{%- if im.src -%}{{ im.src | relative_url }}{%- else -%}
+{%- if im.width > max -%}{%- assign fw = max -%}{%- else -%}{%- assign fw = im.width -%}{%- endif -%}
+{%- assign fh = im.height | times: fw | divided_by: im.width -%}
+https://static.wixstatic.com/media/{{ im.id }}/v1/fit/w_{{ fw }},h_{{ fh }},q_90,enc_auto/{{ im.id }}
+{%- endif -%}

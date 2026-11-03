@@ -1,0 +1,74 @@
+---
+layout: default
+---
+{%- assign projects = site.projects | sort: "order" -%}
+{%- assign locations = projects | map: "location" | uniq -%}
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">{{ site.tagline }}</p>
+      <h1>{{ site.title }}</h1>
+      <p class="lead">Welcome to my portfolio. Here you will find a selection of my work. Explore my projects to learn more.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        {%- if site.cv and site.cv.size > 0 %}
+        <a class="btn" href="{{ site.cv[0].url }}" target="_blank" rel="noopener">Download CV</a>
+        {%- endif %}
+      </div>
+      <dl class="facts">
+        <div><dt>Projects</dt><dd>{{ projects.size }}</dd></div>
+        <div><dt>Places</dt><dd>{{ locations | join: " · " }}</dd></div>
+      </dl>
+    </div>
+    <div class="hero-mosaic" aria-hidden="true">
+      {%- for p in projects limit: 3 %}
+      <div class="mosaic-tile tile-{{ forloop.index }}">
+        {% include image.html img=p.cover alt="" max=640 sizes="(min-width: 960px) 20vw, 40vw" loading="eager" %}
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>My Projects</h2>
+      <p class="muted">Academic projects (SAE) from BUT GEII and apprenticeship work.</p>
+    </div>
+    <ul class="project-grid">
+      {%- for p in projects %}
+      <li>
+        <a class="card" href="{{ p.url | relative_url }}">
+          <div class="card-media">
+            {% include image.html img=p.cover alt=p.title max=960 sizes="(min-width: 1100px) 340px, (min-width: 640px) 45vw, 100vw" %}
+          </div>
+          <div class="card-body">
+            <p class="card-meta">{{ p.year }}<span aria-hidden="true"> · </span>{{ p.type }}</p>
+            <h3>{{ p.title }}</h3>
+            <p class="card-summary">{{ p.summary }}</p>
+            <p class="card-location">{{ p.location }}</p>
+          </div>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- if site.cv and site.cv.size > 0 %}
+<section id="cv" class="section section-alt">
+  <div class="container cv-block">
+    <div>
+      <h2>Curriculum Vitae</h2>
+      <p class="muted">Available in English and French (PDF).</p>
+    </div>
+    <div class="actions">
+      {%- for c in site.cv %}
+      <a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.label }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{%- assign projects = site.projects | sort: "order" -%}
+{%- for p in projects -%}
+  {%- if p.url == page.url -%}
+    {%- assign idx = forloop.index0 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign prev_idx = idx | minus: 1 -%}
+{%- assign next_idx = idx | plus: 1 -%}
+
+<article class="project">
+  <header class="project-header">
+    <div class="container">
+      <a class="back-link" href="{{ '/#projects' | relative_url }}">← All projects</a>
+      <p class="eyebrow">Project {{ idx | plus: 1 }} / {{ projects.size }}</p>
+      <h1>{{ page.title }}</h1>
+      <dl class="details">
+        {%- if page.year %}
+        <div><dt>Year</dt><dd>{{ page.year }}</dd></div>
+        {%- endif %}
+        {%- if page.location %}
+        <div><dt>Location</dt><dd>{{ page.location }}</dd></div>
+        {%- endif %}
+        {%- if page.type %}
+        <div><dt>Project type</dt><dd>{{ page.type }}</dd></div>
+        {%- endif %}
+      </dl>
+    </div>
+  </header>
+
+  <div class="container project-body">
+    {%- if page.cover %}
+    <figure class="project-cover">
+      <a href="{% include image-url.html img=page.cover %}" data-lightbox="project" data-caption="{{ page.title | escape }}">
+        {% include image.html img=page.cover alt=page.title max=1280 sizes="(min-width: 960px) 40vw, 100vw" loading="eager" %}
+      </a>
+    </figure>
+    {%- endif %}
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+
+  {%- if page.gallery and page.gallery.size > 0 %}
+  <section class="container gallery-section" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Gallery</h2>
+    <div class="gallery">
+      {%- for g in page.gallery %}
+      <figure class="gallery-item">
+        <a href="{% include image-url.html img=g %}" data-lightbox="project" data-caption="{{ g.title | default: g.alt | escape }}">
+          {% include image.html img=g alt=g.title max=960 sizes="(min-width: 960px) 30vw, (min-width: 600px) 45vw, 100vw" %}
+        </a>
+        {%- if g.title %}
+        <figcaption>{{ g.title }}</figcaption>
+        {%- endif %}
+      </figure>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  <nav class="container project-nav" aria-label="Other projects">
+    {%- if prev_idx >= 0 %}
+    {%- assign prev = projects[prev_idx] %}
+    <a class="project-nav-link" href="{{ prev.url | relative_url }}">
+      <span class="muted">← Previous</span>
+      <span>{{ prev.title }}</span>
+    </a>
+    {%- else %}
+    <span></span>
+    {%- endif %}
+    {%- if next_idx < projects.size %}
+    {%- assign next = projects[next_idx] %}
+    <a class="project-nav-link next" href="{{ next.url | relative_url }}">
+      <span class="muted">Next →</span>
+      <span>{{ next.title }}</span>
+    </a>
+    {%- endif %}
+  </nav>
+</article>
+
+<dialog class="lightbox" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous image">‹</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lightbox-next" type="button" aria-label="Next image">›</button>
+</dialog>
