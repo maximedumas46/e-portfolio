@@ -66,7 +66,23 @@ gallery:
 Texte en Markdown…
 ```
 
-Pour une image locale, mettez-la dans `assets/img/` et utilisez `src:`. Les images reprises de Wix utilisent `id:` (identifiant Wix Media) et sont servies par le CDN de Wix (`static.wixstatic.com`).
+Pour une image locale, mettez-la dans `assets/img/` et utilisez `src:`. Les images reprises de Wix utilisent `id:` (identifiant Wix Media).
+
+## Copier les médias Wix dans le dépôt (une seule fois)
+
+Les photos, les CV et la vidéo reprises de Wix peuvent être copiés dans le dépôt pour que le site ne dépende plus de Wix :
+
+1. Onglet **Actions** du dépôt → **Import Wix media** (à gauche).
+2. Bouton **Run workflow** → **Run workflow**.
+3. Après 2 à 3 minutes, le workflow a ajouté un commit « Import media from Wix into the repository » :
+   - photos → `assets/media/` (WebP, en 480 / 960 / 1600 px),
+   - CV → `assets/cv/`,
+   - vidéo → `assets/video/`,
+   - et `media_local: true` dans `_config.yml`.
+
+Si l'étape *Commit and push* échoue (erreur 403) : **Settings → Actions → General → Workflow permissions → Read and write permissions**, puis relancer.
+
+Le script (`scripts/import_wix_media.py`) ne modifie rien si un seul téléchargement échoue, et ne retélécharge pas ce qui est déjà copié.
 
 ## Tester en local (facultatif)
 

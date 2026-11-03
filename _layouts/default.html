@@ -20,13 +20,15 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   {%- assign og_img = page.cover | default: page.banner %}
   {%- if og_img %}
-  <meta property="og:image" content="{% include image-url.html img=og_img max=1200 %}">
+  <meta property="og:image" content="{% include image-url.html img=og_img max=1200 absolute=true %}">
   {%- endif %}
   <meta name="theme-color" content="#0b1020">
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- unless site.media_local %}
   <link rel="preconnect" href="https://static.wixstatic.com">
+  {%- endunless %}
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>

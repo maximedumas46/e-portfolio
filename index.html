@@ -90,7 +90,7 @@ lab_photos:
     </div>
     <div class="cv-grid">
       {%- for c in site.cv %}
-      <a class="cv-card" href="{{ c.url }}" target="_blank" rel="noopener">
+      <a class="cv-card" href="{{ c.url | relative_url }}" target="_blank" rel="noopener">
         <div class="cv-preview">
           {% include image.html img=c.preview max=640 sizes="(min-width: 800px) 260px, 45vw" %}
         </div>
@@ -152,8 +152,8 @@ lab_photos:
     </div>
     <div class="video-frame">
       <video controls preload="none" playsinline poster="{{ page.pitch.poster | relative_url }}" width="1280" height="720">
-        <source src="{{ page.pitch.video }}" type="video/mp4">
-        <a href="{{ page.pitch.video }}">Download the video (MP4)</a>
+        <source src="{{ page.pitch.video | relative_url }}" type="video/mp4">
+        <a href="{{ page.pitch.video | relative_url }}">Download the video (MP4)</a>
       </video>
     </div>
   </div>

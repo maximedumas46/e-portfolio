@@ -55,6 +55,10 @@ cv:
       height: 1330
       alt: "Aperçu du CV en français"
 
+# false = photos are loaded from Wix; true = local copies in assets/media/
+# (set automatically by the "Import Wix media" workflow)
+media_local: false
+
 # Projects: one Markdown file per project in _projects/
 collections:
   projects:
@@ -74,6 +78,7 @@ kramdown:
 
 exclude:
   - README.md
+  - scripts
   - Gemfile
   - Gemfile.lock
   - vendor

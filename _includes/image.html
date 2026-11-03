@@ -15,6 +15,20 @@
 {%- assign alt = im.alt | default: include.alt | default: "" -%}
 {%- if im.src -%}
 <img src="{{ im.src | relative_url }}" alt="{{ alt | escape }}"{% if im.width %} width="{{ im.width }}" height="{{ im.height }}"{% endif %}{% if include.class %} class="{{ include.class }}"{% endif %} style="object-position: {{ fx }}% {{ fy }}%" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
+{%- elsif site.media_local -%}
+{%- comment -%} Copies made by scripts/import_wix_media.py: assets/media/<id>-<width>.webp in widths 480, 960 and min(original, 1600) {%- endcomment -%}
+{%- assign prefix = im.id | split: "~" | first | prepend: "/assets/media/" | prepend: site.baseurl | append: "-" -%}
+{%- if im.width > 1600 -%}{%- assign fw = 1600 -%}{%- else -%}{%- assign fw = im.width -%}{%- endif -%}
+{%- assign fh = im.height | times: fw | divided_by: im.width -%}
+{%- assign widths = "480,960" | split: "," -%}
+{%- capture srcset -%}
+{%- for s in widths -%}
+{%- assign cw = s | plus: 0 -%}
+{%- if cw >= fw -%}{%- break -%}{%- endif -%}
+{{ prefix }}{{ cw }}.webp {{ cw }}w, {% endfor -%}
+{{ prefix }}{{ fw }}.webp {{ fw }}w
+{%- endcapture -%}
+<img src="{{ prefix }}{{ fw }}.webp" srcset="{{ srcset | strip }}" sizes="{{ include.sizes | default: '100vw' }}" alt="{{ alt | escape }}" width="{{ fw }}" height="{{ fh }}"{% if include.class %} class="{{ include.class }}"{% endif %} style="object-position: {{ fx }}% {{ fy }}%" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
 {%- else -%}
 {%- assign base = "https://static.wixstatic.com/media/" | append: im.id | append: "/v1/fit/" -%}
 {%- if im.width > max -%}{%- assign fw = max -%}{%- else -%}{%- assign fw = im.width -%}{%- endif -%}
