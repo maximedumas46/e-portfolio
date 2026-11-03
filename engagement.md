@@ -31,25 +31,11 @@ I helped fight food waste and poverty by collecting unsold food from local resta
 {% include gallery.html images=page.photos class="collage" group="barcelona" sizes="(min-width: 960px) 25vw, 50vw" %}
 </section>
 
-<section class="experience prose" markdown="1">
+<section class="prose" markdown="1">
 
 ### Animal Donation Drive — Animalis Toulouse Nord
 
-<ul class="tags">
-  <li>Musotopia</li>
-  <li>Animal protection</li>
-  <li>Outreach &amp; welcoming</li>
-  <li>3 hours</li>
-</ul>
-
 I volunteered with the association Musotopia to help run a donation drive for animals at the Animalis store in Toulouse Nord. During this three-hour mission, I welcomed customers, presented the association and its work, and encouraged them to contribute to the collection for animals in need.
-
-<figure class="testimonial">
-  <blockquote>
-    <p>“Maxime understood the stakes of the mission, and of the association more broadly. He was committed and polite. It was a pleasure to have him with us, and if he wants to come back, he will be more than welcome!”</p>
-  </blockquote>
-  <figcaption>Musotopia — feedback from the association (translated from French)</figcaption>
-</figure>
 
 </section>
 
