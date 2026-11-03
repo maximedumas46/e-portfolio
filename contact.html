@@ -18,6 +18,12 @@ permalink: /contact/
       <span class="contact-label">Phone</span>
       <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>
     </div>
+    {%- if c.linkedin %}
+    <div class="contact-item">
+      <span class="contact-label">LinkedIn</span>
+      <a class="contact-social" href="{{ c.linkedin }}" target="_blank" rel="noopener">{% include icon-linkedin.html %}Maxime Dumas</a>
+    </div>
+    {%- endif %}
   </div>
 
   <form class="contact-form" id="contact-form" action="mailto:{{ c.email }}" method="post" enctype="text/plain" data-email="{{ c.email }}">

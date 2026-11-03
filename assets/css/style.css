@@ -181,6 +181,13 @@ p { margin: 0 0 1em; }
 }
 .nav-links a:hover { color: var(--text); background: var(--surface-2); }
 .nav-links a[aria-current="page"] { color: var(--text); background: var(--surface-2); }
+.nav-links a.nav-social { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); }
+.nav-links a.nav-social:hover { color: #0a66c2; }
+.icon { flex: none; }
+@media (min-width: 1000px) {
+  .nav-social-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .nav-links a.nav-social { padding: 8px 10px; }
+}
 
 .nav-toggle {
   display: none;
@@ -494,6 +501,8 @@ p { margin: 0 0 1em; }
 .site-footer { border-top: 1px solid var(--border); padding: 28px 0; font-size: 0.9rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
 .footer-inner p { margin: 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer-social, .contact-social { display: inline-flex; align-items: center; gap: 8px; }
 
 /* ---------- Home: about ---------- */
 .about { display: grid; gap: 40px; align-items: start; }
@@ -524,13 +533,27 @@ p { margin: 0 0 1em; }
 .photo-grid.collage { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; aspect-ratio: 1 / 1; }
 .photo-grid.collage .photo:first-child { grid-row: 1 / span 2; }
 
-/* Rides: map + photo */
-.photo-grid.ride-photos { grid-template-columns: 1fr; }
-.photo-grid.ride-photos .photo a { aspect-ratio: 16 / 10; }
-.photo-grid.ride-photos .photo img { object-fit: contain; }
+/* Five photos in a 3-column grid: first one spans two columns */
+.photo-grid.cols-3 .photo:first-child:nth-last-child(5) { grid-column: span 2; }
+.photo-grid.square .photo a { height: auto; }
+.photo-grid.square .photo:first-child:nth-last-child(5) a { aspect-ratio: auto; height: 100%; position: relative; }
+.photo-grid.square .photo:first-child:nth-last-child(5) img { position: absolute; inset: 0; }
+
+/* Rides: route map + col photos */
+.ride-map { margin: 0 0 12px; }
+.ride-map a {
+  display: flex;
+  justify-content: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.ride-map img { width: auto; max-width: 100%; max-height: 520px; cursor: zoom-in; }
+.photo-grid.ride-photos { grid-template-columns: 1fr 1fr; }
+.photo-grid.ride-photos .photo a { aspect-ratio: 3 / 4; }
 @media (min-width: 760px) {
-  .photo-grid.ride-photos { grid-template-columns: 1.6fr 1fr; }
-  .photo-grid.ride-photos .photo a { aspect-ratio: auto; height: 420px; }
+  .photo-grid.ride-photos .photo a { aspect-ratio: auto; height: 520px; }
 }
 
 /* ---------- CV cards ---------- */

@@ -53,6 +53,11 @@
           {%- endif %}
         <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
         {%- endfor %}
+        {%- if site.contact.linkedin %}
+        <a class="nav-social" href="{{ site.contact.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          {% include icon-linkedin.html %}<span class="nav-social-label">LinkedIn</span>
+        </a>
+        {%- endif %}
       </nav>
     </div>
   </header>
@@ -64,8 +69,11 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
-      <p class="muted">
+      <p class="footer-links">
         <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+        {%- if site.contact.linkedin %}
+        <a class="footer-social" href="{{ site.contact.linkedin }}" target="_blank" rel="noopener">{% include icon-linkedin.html %}LinkedIn</a>
+        {%- endif %}
       </p>
     </div>
   </footer>
