@@ -714,11 +714,3 @@ p { margin: 0 0 1em; }
   object-fit: cover; /* crops the 3:2 cover image to 16:9; the 16:9 video itself is not cropped */
   background: #fabd24;
 }
-.btn-play {
-  width: 0;
-  height: 0;
-  margin-right: 10px;
-  border-style: solid;
-  border-width: 6px 0 6px 10px;
-  border-color: transparent transparent transparent currentColor;
-}
