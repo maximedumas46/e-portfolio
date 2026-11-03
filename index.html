@@ -70,22 +70,6 @@ lab_photos:
   </div>
 </section>
 
-{%- if page.pitch %}
-<section class="section section-alt pitch" id="pitch">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Video · {{ page.pitch.duration }}</p>
-      <h2>My Elevator Pitch</h2>
-    </div>
-    <div class="video-frame">
-      <video controls preload="none" playsinline poster="{{ page.pitch.poster | relative_url }}" width="1280" height="720">
-        <source src="{{ page.pitch.video }}" type="video/mp4">
-        <a href="{{ page.pitch.video }}">Download the video (MP4)</a>
-      </video>
-    </div>
-  </div>
-</section>
-{%- endif %}
 
 <section class="section" id="about">
   <div class="container about">
@@ -159,3 +143,20 @@ lab_photos:
     </ul>
   </div>
 </section>
+
+{%- if page.pitch %}
+<section class="section pitch" id="pitch">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Video · {{ page.pitch.duration }}</p>
+      <h2>My Elevator Pitch</h2>
+    </div>
+    <div class="video-frame">
+      <video controls preload="none" playsinline poster="{{ page.pitch.poster | relative_url }}" width="1280" height="720">
+        <source src="{{ page.pitch.video }}" type="video/mp4">
+        <a href="{{ page.pitch.video }}">Download the video (MP4)</a>
+      </video>
+    </div>
+  </div>
+</section>
+{%- endif %}
