@@ -1,5 +1,10 @@
 ---
 layout: default
+# Elevator pitch video (hosted on Wix Media) and its cover image
+pitch:
+  video: https://video.wixstatic.com/video/3d2323_832bb735c96d4d729e46cb3b87f670a1/720p/mp4/file.mp4
+  poster: /assets/img/pitch-elevator.webp
+  duration: "3 min 20"
 # Photos of electronics / electrical work shown on the home page
 hero_photos:
   - id: "3d2323_d28b1a78f8bd40f481d28223c8787aac~mv2.jpg"
@@ -46,6 +51,7 @@ lab_photos:
       <p class="lead">My name is Maxime Dumas, and I am currently an engineering student specializing in electronics, electrical energy, and embedded systems.</p>
       <div class="actions">
         <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View projects</a>
+        <a class="btn" href="#pitch"><span class="btn-play" aria-hidden="true"></span>Watch my pitch</a>
         <a class="btn" href="#resume">My resume</a>
       </div>
       <dl class="facts">
@@ -63,6 +69,23 @@ lab_photos:
     </div>
   </div>
 </section>
+
+{%- if page.pitch %}
+<section class="section section-alt pitch" id="pitch">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Video · {{ page.pitch.duration }}</p>
+      <h2>My Elevator Pitch</h2>
+    </div>
+    <div class="video-frame">
+      <video controls preload="none" playsinline poster="{{ page.pitch.poster | relative_url }}" width="1280" height="720">
+        <source src="{{ page.pitch.video }}" type="video/mp4">
+        <a href="{{ page.pitch.video }}">Download the video (MP4)</a>
+      </video>
+    </div>
+  </div>
+</section>
+{%- endif %}
 
 <section class="section" id="about">
   <div class="container about">

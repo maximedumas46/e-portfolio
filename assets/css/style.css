@@ -697,3 +697,28 @@ p { margin: 0 0 1em; }
 .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .contact-form .btn { justify-self: start; border: 0; cursor: pointer; font: inherit; font-weight: 500; }
 .form-note { margin: 0; font-size: 0.85rem; }
+
+/* ---------- Elevator pitch video ---------- */
+.video-frame {
+  max-width: 960px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fabd24; /* matches the cover image while it loads */
+  box-shadow: var(--shadow-hover);
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover; /* crops the 3:2 cover image to 16:9; the 16:9 video itself is not cropped */
+  background: #fabd24;
+}
+.btn-play {
+  width: 0;
+  height: 0;
+  margin-right: 10px;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent currentColor;
+}
