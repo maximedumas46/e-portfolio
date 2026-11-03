@@ -714,3 +714,6 @@ p { margin: 0 0 1em; }
   object-fit: cover; /* crops the 3:2 cover image to 16:9; the 16:9 video itself is not cropped */
   background: #fabd24;
 }
+
+.ride-text { margin-bottom: 20px; }
+.ride-text p:last-child { margin-bottom: 0; }

@@ -20,6 +20,12 @@ rides:
         height: 2048
         alt: "Col d'Aubisque sign"
   - title: Brevet de Randonneur Mondial — 300 km
+    text: |
+      The Brevet de Randonneur Mondial (BRM) is a long-distance cycling event approved by the Audax Club Parisien. It is not a race: there is no ranking, but each distance must be completed within a time limit — 20 hours for a 300 km brevet — by passing through checkpoints along the route, without any outside assistance.
+
+      My 300 km brevet was a loop starting and finishing in Cahors: east to Figeac, then north and west across the Quercy to Sarlat-la-Canéda, before heading back south through Gourdon.
+
+      Riding such a distance in a single day means managing effort, food and hydration over many hours, and staying focused despite fatigue. It was a real test of endurance and self-reliance.
     map:
       id: "3d2323_ad7dbac202f74bafa80dff81ec95d13a~mv2.png"
       width: 838
@@ -31,6 +37,11 @@ rides:
 {%- for ride in page.rides %}
 <article class="ride">
 <h2>{{ ride.title }}</h2>
+{%- if ride.text %}
+<div class="prose ride-text">
+{{ ride.text | markdownify }}
+</div>
+{%- endif %}
 {%- if ride.map %}
 <figure class="ride-map">
 <a href="{% include image-url.html img=ride.map %}" data-lightbox="{{ ride.title | escape }}" data-caption="{{ ride.map.alt | escape }}">

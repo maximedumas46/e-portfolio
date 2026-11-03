@@ -7,16 +7,8 @@ permalink: /contact/
 <div class="contact">
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-label">Address</span>
-      <address>{% for line in c.address %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</address>
-    </div>
-    <div class="contact-item">
       <span class="contact-label">E-mail</span>
       <a href="mailto:{{ c.email }}">{{ c.email }}</a>
-    </div>
-    <div class="contact-item">
-      <span class="contact-label">Phone</span>
-      <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>
     </div>
     {%- if c.linkedin %}
     <div class="contact-item">
