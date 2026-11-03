@@ -18,7 +18,7 @@ rides:
       - id: "3d2323_8ba06db2f9f84814aca6ad80cc749482~mv2.jpg"
         width: 1152
         height: 2048
-        alt: "Col marker in the Pyrenees"
+        alt: "Col d'Aubisque sign"
   - title: Brevet de Randonneur Mondial — 300 km
     map:
       id: "3d2323_ad7dbac202f74bafa80dff81ec95d13a~mv2.png"
