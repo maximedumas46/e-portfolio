@@ -23,7 +23,7 @@ I spent four weeks in Barcelona. This experience was particularly enriching than
   </div>
   <div class="prose" markdown="1">
 
-For the next mobility, I have already discussed opportunities with my company, Axians, and there may be potential openings within the Vinci group. These possibilities are still exploratory for now, and we plan to revisit the topic soon to evaluate what options could align with my training and long-term goals.
+For the next mobility, I have already discussed opportunities with my company, Axians, and there may be potential openings within the Vinci group. We are looking at a **secondment** (*mise à disposition*, Art. L6222-42 of the French Labour Code) to another VINCI Energies subsidiary abroad: my apprenticeship contract would remain active, Axians would keep paying my salary and maintain my social protection, and a secondment agreement would be signed with the host company. These possibilities are still exploratory for now, and we plan to revisit the topic soon to evaluate what options could align with my training and long-term goals.
 
   </div>
 </section>
