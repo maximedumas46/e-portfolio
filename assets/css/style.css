@@ -711,3 +711,10 @@ p { margin: 0 0 1em; }
 
 .ride-text { margin-bottom: 20px; }
 .ride-text p:last-child { margin-bottom: 0; }
+
+/* Tables (Press Review) */
+.table-wrap { overflow-x: auto; margin: 1rem 0 2rem; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 720px; }
+.table-wrap th, .table-wrap td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.table-wrap th { background: var(--surface-2); font-weight: 600; }
+.table-wrap td:first-child { font-weight: 600; color: var(--accent); }
