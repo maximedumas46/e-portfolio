@@ -104,7 +104,9 @@ def education(lang):
                       ['Embedded programming (STM32, C++, VHDL), electronics and instrumentation.',
                        'Project: Python program driving a vector network analyser and an oscilloscope to automate microwave measurements and reports.'])
               + entry('General Baccalaureate <span class="n">– Lycée Clément Marot, Cahors</span>', '2022',
-                      'Mathematics, Physics-Chemistry, English · Honours'))
+                      'Mathematics, Physics-Chemistry, English · Honours')
+              + entry('Aviation Initiation Certificate (BIA) <span class="n">– Cahors</span>', '2020',
+                      'General knowledge of aeronautics · Honours'))
     return (entry('Diplôme d\'ingénieur, Génie Électrique – INP ENSEEIHT', '2025 – 2028',
                   'Filière Génie Électrique (GE), département 3EA · formation par apprentissage',
                   ['Électronique de puissance (différents convertisseurs), machines électriques, automatisme et automatique, programmation de microcontrôleurs, VHDL.'])
@@ -113,7 +115,9 @@ def education(lang):
                   ['Programmation embarquée (STM32, C++, VHDL), électronique et instrumentation.',
                    'Projet : programme Python pilotant un analyseur de réseau vectoriel et un oscilloscope pour automatiser des mesures hyperfréquences et leurs rapports.'])
           + entry('Baccalauréat général <span class="n">– Lycée Clément Marot, Cahors</span>', '2022',
-                  'Spécialités Mathématiques, Physique-Chimie, Anglais · Mention Bien'))
+                  'Spécialités Mathématiques, Physique-Chimie, Anglais · Mention Bien')
+          + entry('Brevet d\'initiation aéronautique (BIA) <span class="n">– Cahors</span>', '2020',
+                  'Connaissances générales du monde de l\'aéronautique · Mention Bien'))
 
 def volunteering(lang):
     if lang == "en":
