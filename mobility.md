@@ -8,10 +8,6 @@ logo:
   height: 1080
   alt: "Axians"
 mobility_docs:
-  - label: Target sheet
-    lang: KOMPASS target sheet · PDF
-    url: /assets/mobility/DUMAS_Target-sheet_Switzerland.pdf
-    preview: { src: /assets/mobility/preview-target-sheet.webp, width: 700, height: 494, alt: "Preview of the target sheet" }
   - label: CV — Switzerland
     lang: English · tailored · PDF
     url: /assets/mobility/DUMAS_CV_Switzerland.pdf
