@@ -31,4 +31,15 @@ The play L’Hiver Sera Chaud highlights the contradictions and challenges our s
 I found this play particularly moving for its ability to combine humor and reflection. It encourages us to question our habits, our relationship with the environment, and solidarity — all while maintaining a hopeful tone. The interactive format, which involved the audience directly in several scenes, was also very relevant and engaging.
 
 </article>
+<article class="text-card prose" markdown="1">
+
+### Thinking About the Effects of Generative AI
+
+On 15 October 2026, I attended the conference *[Penser les effets de l'IA générative](https://futurs-proches.univ-toulouse.fr/events/conference-ia-penser-les-effets-de-liag/)* at Toulouse INP – ENSEEIHT, held in partnership with Atecopol. It looked at generative AI from two angles: its material footprint and its social effects, particularly in higher education and research.
+
+The speakers first defined what we mean by AI and generative AI, then discussed the energy, material and environmental footprint behind these tools. They also explored how AI is changing the world, and universities in particular, and which stances students and staff can adopt towards it.
+
+As an engineering student in electrical energy, I found it valuable to be reminded that AI is not "virtual": it relies on data centres, hardware and electricity. The conference encouraged me to use these tools more consciously, weighing their benefits against their real cost.
+
+</article>
 </div>
