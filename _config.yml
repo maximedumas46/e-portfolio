@@ -39,17 +39,17 @@ cv:
     lang: English
     url: /assets/cv/CV_DUMAS_MAXIME_ENGLISH.pdf
     preview:
-      id: "3d2323_6ad9710460a548d5b60cd45a441441e6~mv2.png"
-      width: 927
-      height: 1312
+      src: /assets/cv/preview-cv-en.webp
+      width: 900
+      height: 1272
       alt: "Preview of the English CV"
   - label: CV_FRANCAIS
     lang: Français
     url: /assets/cv/CV_DUMAS_MAXIME_FRANCAIS.pdf
     preview:
-      id: "3d2323_24cffc80cc0341539d6aab375f98693b~mv2.png"
-      width: 945
-      height: 1330
+      src: /assets/cv/preview-cv-fr.webp
+      width: 900
+      height: 1272
       alt: "Aperçu du CV en français"
 
 # false = photos are loaded from Wix; true = local copies in assets/media/
