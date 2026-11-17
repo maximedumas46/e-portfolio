@@ -1,15 +1,15 @@
 ---
-title: "Electrical Machines – Models and Prototype"
+title: "Machine Models – Induction Machine"
 order: 3
 year: "ENSEEIHT – 2A (2026)"
 location: "INP ENSEEIHT, Toulouse"
-type: "Lab work and micro-project (in progress)"
-summary: "Induction machine efficiency, variable-speed drive control laws and stand-alone induction generator, plus the design, winding and testing of an axial-flux synchronous motor (MicroMAG)."
+type: "Lab work (in progress)"
+summary: "Efficiency and variable-speed drive control laws of an induction motor, then the same machine used as a stand-alone generator with a capacitor bank."
 cover:
-  src: /assets/img/projects/machines/micromag-bench.webp
-  width: 593
-  height: 439
-  alt: "MicroMAG axial-flux motor test bench"
+  src: /assets/img/projects/machines/bench-drives.webp
+  width: 988
+  height: 741
+  alt: "Induction machine test bench with variable-speed drives"
 gallery:
   - src: /assets/img/projects/machines/bench-drives.webp
     width: 988
@@ -39,23 +39,14 @@ gallery:
     width: 889
     height: 540
     title: "Voltage versus speed: self-excitation hysteresis"
-  - src: /assets/img/projects/machines/micromag-winding.webp
-    width: 844
-    height: 983
-    title: "MicroMAG: hand-wound three-phase stator"
-  - src: /assets/img/projects/machines/micromag-emf.webp
-    width: 658
-    height: 426
-    title: "MicroMAG: back-EMF of two phases"
-  - src: /assets/img/projects/machines/micromag-plate.webp
-    width: 1380
-    height: 659
-    title: "MicroMAG: nameplate of our prototype"
+
+
+
 ---
 
 ### Project Objective
 
-Link the models of electrical machines seen in class to their real behaviour on the test bench. Carried out with Patrice Masson (and Roch Berquieres for TP3). The lab series is still in progress: this page will grow with the next sessions.
+Link the models of electrical machines seen in class to their real behaviour on the test bench. Carried out with Patrice Masson and Roch Berquieres. The lab series is still in progress: this page will grow with the next sessions.
 
 ### TP3 – Induction Machine: Efficiency, Control Laws and Stand-alone Generator
 
@@ -71,17 +62,10 @@ Link the models of electrical machines seen in class to their real behaviour on 
 - Self-excitation tests: the generator builds up its voltage from about 30–35 % of the capacitor bank; then load tests showing the voltage collapse and de-excitation when active power increases.
 - Voltage versus speed hysteresis, and conclusion: on an isolated site, an induction generator needs adjustable capacitors with voltage regulation, and a synchronous machine is often a better choice.
 
-### Micro-project – MicroMAG Axial-Flux Synchronous Motor
-
-- **Understand:** magnetic circuit of an axial-flux permanent magnet machine, from Laplace forces to torque.
-- **Design:** calculated the air-gap flux density (≈ 0.37 T) and the number of turns needed for a target torque of 85 mN·m per phase at 2.5 A.
-- **Build:** wound the three phases by hand (30 turns per phase, two slots per pole and per phase) and checked continuity, winding direction and phase shift.
-- **Supply:** self-controlled supply by six reed switches driven by the rotor position (120° commutation), with adjustment of the commutation angle.
-- **Characterise:** back-EMF constant (≈ 0.027 V·s/rad, 8 % below the model), static torque of 182.6 mN·m, no-load speed of 360 rpm, power balance and a nameplate for the prototype, plus ideas to improve its efficiency.
 
 ### Skills Developed
 
-- Electrical machines: induction and synchronous machines, equivalent circuits, magnetic circuits.
+- Induction machine: equivalent circuit, slip, efficiency, reactive power and self-excitation.
 - Variable-speed drives and their control laws.
-- Power and efficiency measurements (power analyser, torque sensor, spring balance).
-- Hands-on prototyping: winding, wiring, commissioning and comparing a model with test results.
+- Power and efficiency measurements (power analyser, torque sensor).
+- Wiring and commissioning a power test bench, and comparing models with measurements.

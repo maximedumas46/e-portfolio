@@ -1,6 +1,6 @@
 ---
 title: "SAE IE – Obstacle Detection Turret"
-order: 5
+order: 6
 year: "BUT2"
 location: "BUT GEII - IUT Paul Sabatier"
 type: "SAE"
