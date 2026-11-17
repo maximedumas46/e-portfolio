@@ -1,6 +1,6 @@
 ---
 title: "SAE – Digital Recorder (Software Part)"
-order: 2
+order: 4
 year: "BUT2"
 location: "BUT GEII - IUT Paul Sabatier"
 type: "SAE"

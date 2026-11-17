@@ -1,6 +1,6 @@
 ---
 title: "SAE SDK – Microwave Measurement Automation"
-order: 4
+order: 6
 year: "BUT3 - Semestre 5"
 location: "BUT GEII - IUT Paul Sabatier"
 type: "SAE"

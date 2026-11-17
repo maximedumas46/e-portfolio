@@ -1,6 +1,6 @@
 ---
 title: "SAE – Graphic Equalizer"
-order: 5
+order: 7
 year: "BUT2"
 location: "BUT GEII - IUT Paul Sabatier"
 type: "Situation d'Apprentissage et d'Evaluation"

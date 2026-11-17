@@ -1,6 +1,6 @@
 ---
 title: "SAE – Elevator"
-order: 6
+order: 8
 year: "BUT3 - Semestre 6"
 location: "BUT GEII - IUT Paul Sabatier"
 type: "Situation d'Apprentissage et d'Evaluation"
