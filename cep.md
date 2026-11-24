@@ -23,7 +23,7 @@ slides:
 
 ## 1. My CEP poster
 
-From technician to engineer: where I come from, one mobility step abroad, and three five-year options. Plan A is to grow within the VINCI Energies network and become a business manager.
+From technician to engineer: where I come from, one mobility step abroad, and three five-year options. In my third year at ENSEEIHT (2027–2028), I will follow the **ACISE track** (*Architecture de Commande et Informatique des Systèmes Embarqués*: control architecture and embedded computing systems). Plan A is to grow within the VINCI Energies network and become a business manager.
 
 </section>
 
