@@ -43,7 +43,7 @@ def entry(title, date, sub=None, bullets=()):
 T = {
  "en": dict(contact="CONTACT", portfolio="Portfolio", tech="TECHNICAL SKILLS", lang="LANGUAGES", pers="PERSONAL SKILLS",
             inter="INTERESTS", profile="PROFILE", exp="PROFESSIONAL EXPERIENCE", edu="EDUCATION", vol="VOLUNTEERING",
-            licence="Driving licence: category B"),
+            licence="Full clean driving licence"),
  "fr": dict(contact="CONTACT", portfolio="Portfolio", tech="COMPÉTENCES TECHNIQUES", lang="LANGUES", pers="QUALITÉS",
             inter="CENTRES D'INTÉRÊT", profile="PROFIL", exp="EXPÉRIENCES PROFESSIONNELLES", edu="FORMATION", vol="BÉNÉVOLAT",
             licence="Permis B"),
@@ -137,7 +137,7 @@ def page(lang, title, subtitle, profile, target=None):
   <h2 class="first">{t["contact"]}</h2>
   <p>Toulouse, France</p>
   <p>+33 6 28 18 14 95</p>
-  <p><a href="mailto:maximedumas46@live.fr">maximedumas46@live.fr</a></p>
+  <p><a href="mailto:maxime.dumas@etu.toulouse-inp.fr">maxime.dumas@etu.toulouse-inp.fr</a></p>
   <p><span class="lbl">{t["portfolio"]}</span><a href="{PORTFOLIO}">maximedumas46.github.io/e-portfolio</a></p>
   <p><span class="lbl">LinkedIn</span><a href="{LINKEDIN}">linkedin.com/in/maxime-dumas-22b062258</a></p>
   <p>{t["licence"]}</p>
