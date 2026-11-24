@@ -7,15 +7,6 @@ logo:
   width: 1920
   height: 1080
   alt: "Axians"
-mobility_docs:
-  - label: CV — Switzerland
-    lang: English · tailored · PDF
-    url: /assets/mobility/DUMAS_CV_Switzerland.pdf
-    preview: { src: /assets/mobility/preview-cv.webp, width: 494, height: 700, alt: "Preview of the tailored CV" }
-  - label: Cover letter — Switzerland
-    lang: English · PDF
-    url: /assets/mobility/DUMAS_Letter_Switzerland.pdf
-    preview: { src: /assets/mobility/preview-letter.webp, width: 494, height: 700, alt: "Preview of the cover letter" }
 ---
 
 <section class="prose" markdown="1">
@@ -55,7 +46,7 @@ For the next mobility, I have already discussed opportunities with my company, A
 
 <div class="mobility-docs" style="margin-top:24px">
   <div class="cv-grid">
-    {%- for c in page.mobility_docs %}
+    {%- for c in site.data.mobility_docs %}
     <a class="cv-card" href="{{ c.url | relative_url }}" target="_blank" rel="noopener">
       <div class="cv-preview">
         {% include image.html img=c.preview max=700 sizes="(min-width: 800px) 260px, 45vw" %}

@@ -168,6 +168,10 @@ CVS = {
     "Apprentice Engineer · Telecom Site Power &amp; Infrastructure",
     'Electrical engineering apprentice at ENSEEIHT, working at Axians in Toulouse on the <span class="hl">electrical installations</span> and <span class="hl">48 V DC power systems</span> that keep fixed and mobile telecom sites running for Orange, Bouygues Telecom, SFR and TOTEM. I want to see how Axians Switzerland builds <span class="hl">turnkey mobile communication sites</span> for all Swiss operators, and bring back methods to my business unit in France.',
     target='Target: 5-week secondment to <b>Axians Schweiz AG</b>, mobile communication sites, Le Mont-sur-Lausanne · 2027'),
+ "DUMAS_CV_Suisse": page("fr", "Maxime DUMAS – CV",
+    "Alternant ingénieur · Énergie et infrastructures des sites télécoms",
+    'Alternant ingénieur en génie électrique à l\'ENSEEIHT, je travaille chez Axians à Toulouse sur les <span class="hl">installations électriques</span> et les <span class="hl">systèmes d\'énergie 48 V DC</span> des sites télécoms fixes et mobiles d\'Orange, Bouygues Telecom, SFR et TOTEM. Je souhaite découvrir comment Axians Suisse construit des <span class="hl">sites de communication mobile clés en main</span> pour tous les opérateurs suisses, et en rapporter des méthodes à ma business unit en France.',
+    target='Objectif : mise à disposition de 5 semaines chez <b>Axians Schweiz AG</b>, sites de communication mobile, Le Mont-sur-Lausanne · 2027'),
 }
 
 out = HERE / "out"; out.mkdir(exist_ok=True)

@@ -1,0 +1,16 @@
+- label: CV — Switzerland
+  lang: English · PDF
+  url: /assets/mobility/DUMAS_CV_Switzerland.pdf
+  preview: { src: /assets/mobility/preview-cv.webp, width: 494, height: 700, alt: "Preview of the tailored CV in English" }
+- label: CV — Suisse
+  lang: Français · PDF
+  url: /assets/mobility/DUMAS_CV_Suisse.pdf
+  preview: { src: /assets/mobility/preview-cv-fr.webp, width: 494, height: 700, alt: "Aperçu du CV ciblé en français" }
+- label: Cover letter — Switzerland
+  lang: English · PDF
+  url: /assets/mobility/DUMAS_Letter_Switzerland.pdf
+  preview: { src: /assets/mobility/preview-letter.webp, width: 494, height: 700, alt: "Preview of the cover letter in English" }
+- label: Lettre de motivation — Suisse
+  lang: Français · PDF
+  url: /assets/mobility/DUMAS_Lettre_Suisse.pdf
+  preview: { src: /assets/mobility/preview-letter-fr.webp, width: 494, height: 700, alt: "Aperçu de la lettre de motivation en français" }

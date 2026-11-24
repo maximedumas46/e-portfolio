@@ -718,3 +718,17 @@ p { margin: 0 0 1em; }
 .table-wrap th, .table-wrap td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
 .table-wrap th { background: var(--surface-2); font-weight: 600; }
 .table-wrap td:first-child { font-weight: 600; color: var(--accent); }
+
+/* CEP page */
+.cep-block { margin-top: 40px; }
+.cep-block:first-child { margin-top: 0; }
+.cep-poster { margin: 16px 0 0; }
+.cep-poster a { border: 1px solid var(--border); }
+.cep-poster img { object-fit: contain; }
+.cep-actions { margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.photo-grid.cep-slides { margin-top: 16px; }
+.photo-grid.cep-slides .photo a { aspect-ratio: 16 / 9; border: 1px solid var(--border); }
+.photo-grid.cep-slides .photo img { object-fit: contain; }
+@media (max-width: 599px) { .photo-grid.cep-slides { grid-template-columns: 1fr; } }
+@media (min-width: 960px) { .cv-grid.cv-grid-4 { grid-template-columns: repeat(4, minmax(0, 240px)); } }
+.cv-grid { margin-top: 16px; }
