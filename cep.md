@@ -8,7 +8,7 @@ intro: "My Career Evolution Plan for the jury of Tuesday 1 December 2026: my pos
 poster:
   src: /assets/cep/poster-cep.webp
   width: 2000
-  height: 1126
+  height: 1125
   alt: "Career Evolution Plan poster: timeline 2022–2031 and plans A, B and C"
   title: "My Career Evolution Plan 2022–2031"
 slides:
